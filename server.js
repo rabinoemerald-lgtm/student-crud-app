@@ -2,13 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dns = require("node:dns/promises");
 
-
-
-
 dns.setServers(["1.1.1.1", "1.0.0.1"]);
-
-
-
 
 const studentRoutes = require("./routes/studentRoutes");
 const app = express();
@@ -17,9 +11,6 @@ const PORT = process.env.PORT || 3000;
 
 
 require("dotenv").config();
-
-
-
 
 // Middleware
 app.use(express.json());
